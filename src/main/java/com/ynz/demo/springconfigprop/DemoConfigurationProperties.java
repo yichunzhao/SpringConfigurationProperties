@@ -13,8 +13,9 @@ import org.springframework.util.Assert;
 public class DemoConfigurationProperties {
 
 
-    public static void main(String[] args) {
-        log.info("++++++++++++++++ START  ++++++++++++++++++++");
+    public static void main(String[] args)  {
+
+
         ConfigurableApplicationContext context = SpringApplication.run(DemoConfigurationProperties.class, args);
         MailProperties mailProperties = context.getBean(MailProperties.class);
 
