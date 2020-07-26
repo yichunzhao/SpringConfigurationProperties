@@ -8,12 +8,12 @@ It decorates a POJO, which is binded with the properties defined in application.
 
 ## Register @ConfigurationProperties POJO
 
-It needs to inform the Spring to pick up the POJO, and instantiate it in the bean factory, and afterwards it can be initialized with the property values.
+It needs to inform the Spring to pick up the POJO, and within the bean factory to instantiate it, and initializing it with the property values.
 There are several way to carry out this goal. 
 
 * Decorating the POJO with @Component
 
-* Using bean method, decorated with a @ConfigurationProperties. 
+* Using bean method, decorated with a @ConfigurationProperties, meaning that this bean is binded with the property file. 
 
 * Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, by @ConfigurationPropertiesScan along with @SpringBootApplication.
 
