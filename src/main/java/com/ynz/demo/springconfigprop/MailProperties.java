@@ -1,16 +1,17 @@
 package com.ynz.demo.springconfigprop;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-@ConfigurationProperties(prefix = "mail")
+//@ConfigurationProperties(prefix = "mail")
 @Setter
 @Getter
+@NoArgsConstructor
 public class MailProperties {
     @NotBlank(message = "mail hostname is compulsory")
     private String hostname;
