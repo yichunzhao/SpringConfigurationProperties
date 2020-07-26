@@ -13,9 +13,9 @@ There are several way to carry out this goal.
 
 * Decorating the POJO with @Component
 
-* Generating the POJO in a Bean method, which is decorated with a @ConfigurationProperties. 
+* Using bean method, decorated with a @ConfigurationProperties. 
 
-* Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, but @@ConfigurationPropertiesScan along with @SpringBootApplication.
+* Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, by @ConfigurationPropertiesScan along with @SpringBootApplication.
 
 
 
