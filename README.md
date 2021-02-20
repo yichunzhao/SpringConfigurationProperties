@@ -13,7 +13,7 @@ There are several way to carry out this goal.
 
 * Decorating the POJO with @Component; IOC do the property binding within the bean factory
 
-* Using bean method, decorated with a @ConfigurationProperties, meaning that this bean is binded with the property file. 
+* Using bean method, decorated with a @ConfigurationProperties, meaning that this bean is bind with the property file. 
 
 * Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, by @EnableConfigurationProperties 
 and @ConfigurationPropertiesScan along with @SpringBootApplication.
