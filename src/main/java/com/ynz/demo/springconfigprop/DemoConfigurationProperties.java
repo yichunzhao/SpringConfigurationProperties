@@ -4,14 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.Assert;
 
 @SpringBootApplication
+@EnableConfigurationProperties
+@ConfigurationPropertiesScan
 @Slf4j
 public class DemoConfigurationProperties {
-
 
     public static void main(String[] args) {
 
@@ -26,6 +29,12 @@ public class DemoConfigurationProperties {
         Assert.isTrue(anotherMailProperties.getFrom().equals("anothermailer@mail.com"), "unexpected value.");
         Assert.isTrue(anotherMailProperties.getPort() == 9001, "unexpected value.");
         Assert.isTrue(anotherMailProperties.getHostname().equals("anotherhost@mail.com"), "unexpected value.");
+
+        log.info("... Binding properties directly to POJO by annotations ...");
+        PromotionPlan promotionPlan = context.getBean(PromotionPlan.class);
+
+        Assert.notNull(promotionPlan, "promotionPlan is a null value");
+        log.info("promotion plan: " + promotionPlan.toString());
 
         log.info("++++++++++++++++  END  ++++++++++++++++++++");
     }
