@@ -4,19 +4,18 @@ Spring Boot has one handy feature, binding external properties to a POJO, whose 
 ## @ConfigurationProperties
 
 It works the best with a hierarchical property structure that have the same pre-fix. 
-It decorates a POJO, which is bind with the properties defined in application.properties.
+It decorates a POJO, which is binded with the properties defined in application.properties.
 
 ## Register @ConfigurationProperties POJO
 
-It needs to inform the Spring IOC to pick up the POJO, and afterwards it can be initialized with the property values.
+It needs to inform the Spring to pick up the POJO, and instantiate it in the bean factory, and afterwards it can be initialized with the property values.
 There are several way to carry out this goal. 
 
-* Decorating the POJO with @Component; this is the most simple way, Spring will do the binding within IOC.
+* Decorating the POJO with @Component
 
 * Using bean method, decorated with a @ConfigurationProperties. 
 
-* Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, by @ConfigurationPropertiesScan 
-and @EnableConfigurationProperties along with @SpringBootApplication.
+* Decorating the POJO with @ConfigurationProperties, meanwhile enabling property scanning, by @ConfigurationPropertiesScan along with @SpringBootApplication.
 
 
 
